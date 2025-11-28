@@ -1,0 +1,16 @@
+/**
+ * OLTANA Page Kit - Block Editor Styles
+ * Gutenberg エディタ上での見え方を整えるための CSS。
+ * フロントとの差分をここに書くイメージです。
+ */
+
+/* エディタ上でセクション間にわかりやすい余白をつける */
+.editor-styles-wrapper .opk-section {
+    margin-block: 3rem;
+}
+
+/* エディタ上でセクションタイトルを少しわかりやすく */
+.editor-styles-wrapper .opk-section-title {
+    border-bottom: 1px dashed rgba(0, 0, 0, .15);
+    padding-bottom: .25rem;
+}
