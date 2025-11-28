@@ -1,0 +1,33 @@
+/**
+ * OLTANA Page Kit - Frontend Styles
+ * ここに各パターン共通のデザインを足していく想定です。
+ * すべて .opk- から始まるクラスのみを使ってください。
+ */
+
+/* 共通セクションレイアウト */
+.opk-section {
+    margin-block: 4rem;
+}
+
+/* セクションタイトル（見出し相当） */
+.opk-section-title {
+    font-weight: 600;
+    letter-spacing: .08em;
+    line-height: 1.6;
+}
+
+/* ページ全体の横幅調整（例） */
+.opk-pricing-page {
+    max-width: 960px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+}
+
+/* 料金プランのカード（例：あとで中身を整えてください） */
+.opk-pricing-plans {
+    /* Columns ブロック側の余白に合わせて微調整 */
+}
+
+.opk-pricing-cta {
+    text-align: center;
+}
