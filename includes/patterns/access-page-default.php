@@ -9,167 +9,68 @@ register_block_pattern(
         'title'      => '[汎用] アクセスページ（所在地＋地図）',
         'categories' => array( 'opk-page-access' ),
         'content'    => trim('
-<!-- wp:group {"className":"opk-access-page opk-section"} -->
-<div class="wp-block-group opk-access-page opk-section">
+<div style="font-family: 'Noto Sans JP', sans-serif; color: #333333; background-color: #ffffff; line-height: 1.6; max-width: 1000px; margin: 40px auto; padding: 0 20px; box-sizing: border-box;">
 
-    <!-- セクション1：ページタイトル -->
-    <!-- wp:group {"className":"opk-access-header"} -->
-    <div class="wp-block-group opk-access-header">
-        <!-- wp:paragraph {"className":"opk-section-title"} -->
-        <p class="opk-section-title" role="heading" aria-level="2">アクセス</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>〇〇株式会社（御社名）の所在地・アクセス方法をご案内します。ご来社の際は、こちらの情報をご確認ください。</p>
-        <!-- /wp:paragraph -->
+    <div style="text-align: center; margin-bottom: 40px;">
+        <span style="font-size: 0.9rem; color: #a5b1c2; display: block; font-weight: 500; letter-spacing: 0.05em;">ACCESS</span>
+        <h2 style="font-size: 2rem; font-weight: 700; letter-spacing: 0.1em; margin: 10px 0 0 0; color: #333;">アクセス</h2>
+        <div style="width: 40px; height: 3px; background-color: #2c3e50; margin: 15px auto 0; border-radius: 2px;"></div>
     </div>
-    <!-- /wp:group -->
 
-    <!-- セクション2：所在地・連絡先情報 -->
-    <!-- wp:group {"className":"opk-access-info"} -->
-    <div class="wp-block-group opk-access-info">
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
 
-        <!-- wp:paragraph {"className":"opk-block-title"} -->
-        <p class="opk-block-title" role="heading" aria-level="3">所在地</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>〒000-0000　都道府県市区町村〇〇〇-0-0<br>〇〇ビル 3F（御社所在地に書き換えてください）</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph {"className":"opk-block-title"} -->
-        <p class="opk-block-title" role="heading" aria-level="3">連絡先</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>TEL：00-0000-0000（御社電話番号）<br>FAX：00-0000-0000（不要な場合は削除してください）</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>営業時間：平日 00:00〜00:00（例）<br>定休日：土日祝（例）</p>
-        <!-- /wp:paragraph -->
-    </div>
-    <!-- /wp:group -->
-
-    <!-- セクション3：電車・車でのアクセス -->
-    <!-- wp:group {"className":"opk-access-route"} -->
-    <div class="wp-block-group opk-access-route">
-
-        <!-- wp:group {"className":"opk-access-route__block"} -->
-        <div class="wp-block-group opk-access-route__block">
-            <!-- wp:paragraph {"className":"opk-block-title"} -->
-            <p class="opk-block-title" role="heading" aria-level="3">電車でお越しの場合</p>
-            <!-- /wp:paragraph -->
-
-            <!-- wp:paragraph -->
-            <p>○○線「○○駅」○○出口より徒歩約5分です。（最寄駅名・出口・所要時間に書き換えてください）</p>
-            <!-- /wp:paragraph -->
-
-            <!-- wp:list -->
-            <ul>
-                <li>○○線「○○駅」からお越しの場合：改札を出て○○方面へお進みください。</li>
-                <li>△△線「△△駅」からお越しの場合：□□出口より○○方面へお進みください。</li>
-            </ul>
-            <!-- /wp:list -->
+        <div style="flex: 1; min-width: 300px; min-height: 400px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.05); position: relative;">
+            <iframe src="https://maps.google.com/maps?q=Tokyo&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0; position: absolute; top: 0; left: 0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-        <!-- /wp:group -->
 
-        <!-- wp:group {"className":"opk-access-route__block"} -->
-        <div class="wp-block-group opk-access-route__block">
-            <!-- wp:paragraph {"className":"opk-block-title"} -->
-            <p class="opk-block-title" role="heading" aria-level="3">お車でお越しの場合</p>
-            <!-- /wp:paragraph -->
-
-            <!-- wp:paragraph -->
-            <p>当社専用の駐車場はございません。お車でお越しの際は、近隣のコインパーキングをご利用ください。（必要に応じて書き換えてください）</p>
-            <!-- /wp:paragraph -->
-
-            <!-- wp:list -->
-            <ul>
-                <li>近隣のコインパーキングまで徒歩1〜3分（例）</li>
-                <li>おおよその目安料金や台数などを記載してもOKです。</li>
-            </ul>
-            <!-- /wp:list -->
-        </div>
-        <!-- /wp:group -->
-
-    </div>
-    <!-- /wp:group -->
-
-    <!-- セクション4：地図（Google Maps 埋め込み枠） -->
-    <!-- wp:group {"className":"opk-access-map"} -->
-    <div class="wp-block-group opk-access-map">
-
-        <!-- wp:paragraph {"className":"opk-block-title"} -->
-        <p class="opk-block-title" role="heading" aria-level="3">地図</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>下記の地図はダミーです。実際の所在地に合わせて、Google Maps の埋め込みコードに差し替えてください。</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:html -->
-        <div class="opk-access-map__frame">
-            <!-- Google Maps の埋め込みコードをここに貼り付けてください -->
-        </div>
-        <!-- /wp:html -->
-
-    </div>
-    <!-- /wp:group -->
-
-    <!-- セクション5：来社時の注意事項や補足 -->
-    <!-- wp:group {"className":"opk-access-notes"} -->
-    <div class="wp-block-group opk-access-notes">
-
-        <!-- wp:paragraph {"className":"opk-block-title"} -->
-        <p class="opk-block-title" role="heading" aria-level="3">ご来社時の注意事項</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:list -->
-        <ul>
-            <li>ご来社の際は、事前にお問い合わせフォームまたはお電話にてご予約をお願いいたします。（例）</li>
-            <li>ビルのエントランスがオートロックの場合は、インターホンで「○○○」をお呼び出しください。（例）</li>
-            <li>発熱や体調不良がある場合は、ご来社をお控えいただき、日程変更をご相談ください。（例）</li>
-        </ul>
-        <!-- /wp:list -->
-    </div>
-    <!-- /wp:group -->
-
-    <!-- セクション6：お問い合わせCTA -->
-    <!-- wp:group {"className":"opk-access-cta opk-section"} -->
-    <div class="wp-block-group opk-access-cta opk-section">
-
-        <!-- wp:paragraph {"className":"opk-section-title"} -->
-        <p class="opk-section-title" role="heading" aria-level="2">ご来社予約・お問い合わせはこちら</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:paragraph -->
-        <p>ご相談やご来社のご予約は、お問い合わせフォームまたはお電話にて承っております。お気軽にご連絡ください。</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:buttons {"className":"opk-access-cta__buttons"} -->
-        <div class="wp-block-buttons opk-access-cta__buttons">
-
-            <!-- wp:button {"className":"opk-access-cta__button--primary"} -->
-            <div class="wp-block-button opk-access-cta__button--primary">
-                <a class="wp-block-button__link" href="#">お問い合わせフォームへ</a>
+        <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center;">
+            <h3 style="font-size: 1.5rem; font-weight: 700; margin: 0 0 24px 0; border-left: 5px solid #2c3e50; padding-left: 15px; line-height: 1.2; color: #333;">
+                青山デザインスタジオ
+            </h3>
+            
+            <div style="margin-bottom: 30px;">
+                <div style="display: flex; margin-bottom: 15px; align-items: baseline;">
+                    <div style="font-weight: 700; color: #2c3e50; font-size: 0.95rem; width: 5em; flex-shrink: 0;">住所</div>
+                    <div style="font-size: 1rem;">
+                        〒107-0062<br>
+                        東京都港区南青山1-2-3 デザインビル 2F
+                    </div>
+                </div>
+                <div style="display: flex; margin-bottom: 15px; align-items: baseline;">
+                    <div style="font-weight: 700; color: #2c3e50; font-size: 0.95rem; width: 5em; flex-shrink: 0;">営業時間</div>
+                    <div style="font-size: 1rem;">
+                        10:00 - 19:00<br>
+                        <span style="font-size: 0.85em; color: #888;">定休日：水曜日・祝日</span>
+                    </div>
+                </div>
+                <div style="display: flex; margin-bottom: 15px; align-items: baseline;">
+                    <div style="font-weight: 700; color: #2c3e50; font-size: 0.95rem; width: 5em; flex-shrink: 0;">電話番号</div>
+                    <div style="font-size: 1rem;">03-1234-5678</div>
+                </div>
             </div>
-            <!-- /wp:button -->
 
-            <!-- wp:button {"className":"opk-access-cta__button--secondary","fontSize":"small"} -->
-            <div class="wp-block-button opk-access-cta__button--secondary">
-                <a class="wp-block-button__link has-small-font-size" href="tel:0000000000">お電話でのお問い合わせ</a>
+            <div style="background-color: #f9f9f9; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
+                <div style="display: flex; align-items: flex-start; margin-bottom: 10px; font-size: 0.95rem;">
+                    <span style="background-color: #2c3e50; color: #fff; font-size: 0.75rem; padding: 2px 8px; border-radius: 4px; margin-right: 12px; white-space: nowrap; margin-top: 3px;">電車</span>
+                    <span>銀座線・半蔵門線「青山一丁目駅」<br>4番出口より徒歩3分</span>
+                </div>
+                <div style="display: flex; align-items: flex-start; margin-bottom: 0; font-size: 0.95rem;">
+                    <span style="background-color: #2c3e50; color: #fff; font-size: 0.75rem; padding: 2px 8px; border-radius: 4px; margin-right: 12px; white-space: nowrap; margin-top: 3px;">お車</span>
+                    <span>専用駐車場なし<br><small style="color:#777;">※近隣のコインパーキングをご利用ください</small></span>
+                </div>
             </div>
-            <!-- /wp:button -->
 
+            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                <a href="https://goo.gl/maps/placeholder" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; padding: 14px 24px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.95rem; flex: 1; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #2c3e50; color: #fff;">
+                    Googleマップで見る
+                </a>
+                <a href="tel:0312345678" style="display: inline-flex; align-items: center; justify-content: center; padding: 14px 24px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.95rem; flex: 1; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #fff; color: #2c3e50; border: 2px solid #2c3e50; box-sizing: border-box;">
+                    電話をかける
+                </a>
+            </div>
         </div>
-        <!-- /wp:buttons -->
-
     </div>
-    <!-- /wp:group -->
-
 </div>
-<!-- /wp:group -->
         '),
     )
 );
